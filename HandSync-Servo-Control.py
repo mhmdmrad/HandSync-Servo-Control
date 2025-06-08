@@ -5,9 +5,9 @@ import pyfirmata
 import time
 
 
-board = pyfirmata.Arduino('COM5')  # Change COM port as needed
-servo_pin1 = board.get_pin('d:9:s')  # Servo 1 on pin 9 (right hand)
-servo_pin2 = board.get_pin('d:10:s')  # Servo 2 on pin 10 (left hand)
+board = pyfirmata.Arduino('COM5')  # change COM port as needed
+servo_pin1 = board.get_pin('d:9:s')  # servo 1 on pin 9 (right hand)
+servo_pin2 = board.get_pin('d:10:s')  # servo 2 on pin 10 (left hand)
 it = pyfirmata.util.Iterator(board)
 it.start()
 time.sleep(1)  
@@ -16,7 +16,7 @@ time.sleep(1)
 mp_hands = mp.solutions.hands
 mp_draw = mp.solutions.drawing_utils
 hands = mp_hands.Hands(
-    max_num_hands=2,  # Detect 2 hands
+    max_num_hands=2,  # detect 2 hands
     min_detection_confidence=0.7,
     min_tracking_confidence=0.7
 )
